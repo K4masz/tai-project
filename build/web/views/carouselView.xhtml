@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                template="./../template/masterTemplate.xhtml">
+
+    <ui:define name="content">
+        <div id="myCarouse2" class="carousel slide" data-ride="carouse2">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarouse2" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarouse2" data-slide-to="1"></li>
+                <li data-target="#myCarouse2" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner row">
+                <div class="item active">
+                    <h:graphicImage class="center-block" name="Image1.jpg" library="images"/>
+                </div>
+                <div class="item">
+                    <h:graphicImage class="center-block" name="Image2.jpg" library="images"/>
+                </div>
+                <div class="item row">
+                    <h:graphicImage class="center-block" name="Image3.jpg" library="images"/>
+                </div>
+            </div>
+
+                <a class="left carousel-control" href="#myCarouse2" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span> 
+                    <span class="sr-only">Previous</span> 
+                </a>
+                <a class="right carousel-control" href="#myCarouse2" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span> 
+                    <span class="sr-only">Next</span> 
+                </a> 
+            </div>
+    </ui:define>
+
+</ui:composition>

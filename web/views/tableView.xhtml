@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="./../template/masterTemplate.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <ui:define name="content">
+        <div class="table-responsive">
+            <h:dataTable value="#{newJSFManagedBeanSession.dataRow}" var="dataRows"
+                         class="table-striped table-bordered table-hover">
+                <h:column>
+                    <f:facet name="header">Name</f:facet>
+                    <h:outputText value="#{dataRows.name}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Lastname</f:facet>
+                    <h:outputText value="#{dataRows.lastName}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Age</f:facet>
+                    <h:outputText value="#{dataRows.age}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">City</f:facet>
+                    <h:outputText value="#{dataRows.city}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Phone</f:facet>
+                    <h:outputText value="#{dataRows.phoneNumber}"/>
+                </h:column>
+            </h:dataTable>
+        </div>
+    </ui:define>
+</ui:composition>

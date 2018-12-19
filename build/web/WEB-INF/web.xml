@@ -19,13 +19,13 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>faces/views/mainWindow.xhtml</welcome-file>
+        <welcome-file>faces/views/carouselView.xhtml</welcome-file>
     </welcome-file-list>
     <login-config>
         <auth-method>FORM</auth-method>
         <form-login-config>
-            <form-login-page>/faces/windows/logonWindow.xhtml</form-login-page>
-            <form-error-page>/faces/errorWindow.xhtml</form-error-page>
+            <form-login-page>/faces/logonWindow.xhtml</form-login-page>
+            <form-error-page>/faces/logonError.xhtml</form-error-page>
         </form-login-config>
     </login-config>
     <security-constraint>
@@ -34,12 +34,12 @@
             <url-pattern>/faces/index.xhtml</url-pattern>
             <url-pattern>/faces/views/*</url-pattern>
             <url-pattern>/views/*</url-pattern>
-            <url-pattern>/faces/windows/</ur>
         </web-resource-collection>
         <auth-constraint>
-            <role-name>students</role-name>
+            <role-name>tomcat</role-name>
         </auth-constraint>
         <user-data-constraint>
             <transport-guarantee>CONFIDENTIAL</transport-guarantee>
         </user-data-constraint>
+    </security-constraint>
 </web-app>
