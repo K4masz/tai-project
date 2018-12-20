@@ -23,8 +23,8 @@ public class NewJSFManagedBeanView {
 
     private List<UzytkownikTo> uzytkownikToList;
 
-    @ManagedProperty(value="#{NewJSFManagedBeanApplication}")
-    NewJSFManagedBeanApplication appBean;
+    @ManagedProperty(value="#{newJSFManagedBeanApplication}")
+    private NewJSFManagedBeanApplication appBean;
     
     public NewJSFManagedBeanView() {
         this.uzytkownikToList = new ArrayList();
@@ -93,6 +93,7 @@ public class NewJSFManagedBeanView {
     public void setAppBean(NewJSFManagedBeanApplication appBean) {
         this.appBean = appBean;
     }
+    
     
     
 }

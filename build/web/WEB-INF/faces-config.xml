@@ -10,8 +10,7 @@
         <managed-bean-scope>application</managed-bean-scope>
         <managed-property>
             <property-name>applicationVersion</property-name>
-            <value>1.0.0</value>
-            <property-class>java.lang.String</property-class>
+            <value>v1.0.0</value>
         </managed-property>
     </managed-bean>
     

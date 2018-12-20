@@ -48,9 +48,10 @@
             <h:commandButton value="#{msg.refreshData}" action="#{newJSFManagedBeanView.refreshData()}">
                 <f:ajax listener="#{newJSFManagedBeanView.refreshData()}" render="@form" />
             </h:commandButton>
-       
+    
         </div>
               </h:form>
+        <h:outputText value="App: v. #{newJSFManagedBeanView.appBean.applicationVersion}" />
     </ui:define>
 </ui:composition>
 
