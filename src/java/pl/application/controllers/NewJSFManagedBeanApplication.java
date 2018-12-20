@@ -5,21 +5,29 @@
  */
 package pl.application.controllers;
 
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
+
 
 /**
  *
  * @author K4masz
  */
-@ManagedBean
-@ApplicationScoped
+
 public class NewJSFManagedBeanApplication {
 
+    
+    String applicationVersion = "";
     /**
      * Creates a new instance of NewJSFManagedBeanApplication
      */
     public NewJSFManagedBeanApplication() {
+    }
+
+    public String getApplicationVersion() {
+        return applicationVersion;
+    }
+
+    public void setApplicationVersion(String applicationVersion) {
+        this.applicationVersion = applicationVersion;
     }
     
 }

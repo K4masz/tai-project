@@ -8,6 +8,11 @@
         <managed-bean-name>newJSFManagedBeanApplication</managed-bean-name>
         <managed-bean-class>pl.application.controllers.NewJSFManagedBeanApplication</managed-bean-class>
         <managed-bean-scope>application</managed-bean-scope>
+        <managed-property>
+            <property-name>applicationVersion</property-name>
+            <value>1.0.0</value>
+            <property-class>java.lang.String</property-class>
+        </managed-property>
     </managed-bean>
     
     <application>

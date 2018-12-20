@@ -10,43 +10,43 @@
          <h:form>
         <div class="table-responsive">
            
-            <h:dataTable value="#{newJSFManagedBeanSession.uzytkownikToList}" var="uzytkownikTOList" bgcolor="LightGray" border="3" cellspacing="2" rows="0" rowClasses="oddRow, evenRow" footerClass="errorMessage">
+            <h:dataTable value="#{newJSFManagedBeanView.uzytkownikToList}" var="uzytkownikTOList" bgcolor="LightGray" border="3" cellspacing="2" rows="0" rowClasses="oddRow, evenRow" footerClass="errorMessage">
                 <h:column>
-                    <f:facet name="header">Identyfikator</f:facet>
+                    <f:facet name="header">#{msg.id}</f:facet>
                     <h:outputText value="#{uzytkownikTOList.id}"/>
                 </h:column>
                 <h:column>
-                    <f:facet name="header">Nazwisko
+                    <f:facet name="header">#{msg.surname}
                         <h:commandButton id="sortDown" value='&dArr;'>
-                            <f:ajax listener="#{newJSFManagedBeanSession.sort('asc')}" render="@form" /> 
+                            <f:ajax listener="#{newJSFManagedBeanView.sort('asc')}" render="@form" /> 
                         </h:commandButton>
                         <h:commandButton id="sortUp" value='&uArr;'>
-                            <f:ajax listener="#{newJSFManagedBeanSession.sort('desc')}" render="@form" /> 
+                            <f:ajax listener="#{newJSFManagedBeanView.sort('desc')}" render="@form" /> 
                         </h:commandButton>
                     </f:facet>
                     <h:inputText value="#{uzytkownikTOList.nazwisko}" rendered="#{uzytkownikTOList.edited}" />
                     <h:outputText value="#{uzytkownikTOList.nazwisko}" rendered="#{not uzytkownikTOList.edited}"/>
                 </h:column>
                 <h:column>
-                    <f:facet name="header">Imie</f:facet>
+                    <f:facet name="header">#{msg.name}</f:facet>
                     <h:inputText value="#{uzytkownikTOList.imie}" rendered="#{uzytkownikTOList.edited}" />
                     <h:outputText value="#{uzytkownikTOList.imie}" rendered="#{not uzytkownikTOList.edited}"/>
                 </h:column>
                 <h:column id="kolOperacja">
-                    <f:facet name="header">Operacja</f:facet>
+                    <f:facet name="header">#{msg.operation}</f:facet>
                     <h:selectBooleanCheckbox id="editCheckBox" value="#{uzytkownikTOList.edited}"
                                              rendered="true" >
-                        <f:ajax listener="#{newJSFManagedBeanSession.visibleChange(uzytkownikTOList)}" execute="@form" render="@form" /></h:selectBooleanCheckbox>
+                        <f:ajax listener="#{newJSFManagedBeanView.visibleChange(uzytkownikTOList)}" execute="@form" render="@form" /></h:selectBooleanCheckbox>
                     <h:commandButton id="addRow" value="+">
-                        <f:ajax listener="#{newJSFManagedBeanSession.addRow(uzytkownikTOList)}" execute="@form" render="@form" />
+                        <f:ajax listener="#{newJSFManagedBeanView.addRow(uzytkownikTOList)}" execute="@form" render="@form" />
                     </h:commandButton>
                     <h:commandButton id="deleteRow" value="-">
-                        <f:ajax listener="#{newJSFManagedBeanSession.deleteRow(uzytkownikTOList)}" execute="@form" render="@form" />
+                        <f:ajax listener="#{newJSFManagedBeanView.deleteRow(uzytkownikTOList)}" execute="@form" render="@form" />
                     </h:commandButton>
                 </h:column>
             </h:dataTable>
-            <h:commandButton value="Odswiez dane" action="#{newJSFManagedBeanSession.refreshData()}">
-                <f:ajax listener="#{newJSFManagedBeanSession.refreshData()}" render="@form" />
+            <h:commandButton value="#{msg.refreshData}" action="#{newJSFManagedBeanView.refreshData()}">
+                <f:ajax listener="#{newJSFManagedBeanView.refreshData()}" render="@form" />
             </h:commandButton>
        
         </div>
